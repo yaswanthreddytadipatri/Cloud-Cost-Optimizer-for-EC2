@@ -15,8 +15,9 @@ start_time = end_time - datetime.timedelta(hours=24)  # Adjust the time range as
 # List EC2-related CloudWatch metrics
 response = cloudwatch.list_metrics(Namespace=ec2_namespace)
 
-# Initialize a list to store metric details and utilization data
+# Initialize lists to store metric details and utilization data
 ec2_metrics_data = []
+cpu_utilization_data = []
 
 # Iterate through EC2 metrics
 for metric in response['Metrics']:
@@ -41,6 +42,7 @@ for metric in response['Metrics']:
 
     # Calculate the average utilization
     average_utilization = sum(utilization_data) / len(utilization_data) if utilization_data else None
+    highest_utilization = max(utilization_data) if utilization_data else None
 
     # Append metric details and average utilization data to the list
     ec2_metrics_data.append({
@@ -48,9 +50,96 @@ for metric in response['Metrics']:
         'Namespace': metric['Namespace'],
         'Dimensions': metric['Dimensions'],
         'AverageUtilization': average_utilization,
+        'HighestUtilization': highest_utilization,
     })
+
+    # Check if the metric is CPUUtilization
+    if metric['MetricName'] == 'CPUUtilization':
+        # Append only CPUUtilization details to the CPU utilization data list
+        cpu_utilization_data.append({
+            'MetricName': metric['MetricName'],
+            'Namespace': metric['Namespace'],
+            'Dimensions': metric['Dimensions'],
+            'AverageUtilization': average_utilization,
+            'HighestUtilization': highest_utilization,
+        })
 
 # Save the EC2 metric details and average utilization data to a JSON file
 with open('ec2_cloudwatch_metrics_average_data.json', 'w') as json_file:
     json.dump(ec2_metrics_data, json_file, indent=4)
 print("File is saved as ec2_cloudwatch_metrics_average_data.json")
+
+# Save only CPUUtilization details to a separate JSON file
+with open('cpu_utilization_metrics_data.json', 'w') as cpu_json_file:
+    json.dump(cpu_utilization_data, cpu_json_file, indent=4)
+print("File is saved as cpu_utilization_metrics_data.json")
+
+import json
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn import metrics
+
+# Your provided JSON data
+json_data = cpu_utilization_data
+
+
+# Load JSON data into a Python object
+# data = json.loads(json_data)
+
+# Create a DataFrame from the JSON data
+df = pd.DataFrame(json_data)
+
+# Extracting Dimensions into separate columns
+for dim in df['Dimensions']:
+    if dim:
+        for d in dim:
+            df[d['Name'] + '_' + d['Value']] = 1
+
+# Drop the original 'Dimensions' column
+df.drop('Dimensions', axis=1, inplace=True)
+
+# Split the data into features (X) and target variable (y)
+X = df.drop(['MetricName', 'Namespace', 'AverageUtilization', 'HighestUtilization'], axis=1)
+y = df['AverageUtilization']
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Define new_instance_df and align columns
+new_instance_data = {
+    'InstanceId_i-xyz': 1,
+    'InstanceType_t3.micro': 1,
+    'ImageId_ami-xyz': 1,
+    '': 1
+}
+
+new_instance_df = pd.DataFrame([new_instance_data])
+new_instance_df = new_instance_df.reindex(columns=X_train.columns, fill_value=0)
+
+# Train a linear regression model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Make predictions on the test set
+y_pred = model.predict(X_test)
+
+# Evaluate the model
+mse = metrics.mean_squared_error(y_test, y_pred)
+print(f'Mean Squared Error: {mse}')
+
+# Threshold for deciding whether to increase or decrease CPU
+threshold = 80
+
+# Predicted CPU Utilization for new instance
+new_instance_prediction = model.predict(new_instance_df)[0]
+
+print(f'Predicted CPU Utilization for new instance: {new_instance_prediction}')
+
+# Decision based on the threshold
+if new_instance_prediction > threshold:
+    print('Consider increasing CPU.')
+else:
+    print('Consider decreasing CPU.')
+
+

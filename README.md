@@ -29,7 +29,7 @@ Before running the script, make sure you have the following in place:
 1. Clone the repository to your local machine:
 
    ```sh
-   git clone https://github.com/your-username/ec2-cloudwatch-metrics.git
+   git clone https://github.com/yaswanthreddytadipatri/Cloud-Cost-Optimizer-for-EC2.git
 
 2. Edit the script (CloudWatch_EC2_details_Average.py) to customize the following parameters:
 
