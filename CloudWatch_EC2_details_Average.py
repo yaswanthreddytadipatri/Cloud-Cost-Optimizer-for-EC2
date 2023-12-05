@@ -74,7 +74,13 @@ with open('cpu_utilization_metrics_data.json', 'w') as cpu_json_file:
     json.dump(cpu_utilization_data, cpu_json_file, indent=4)
 print("File is saved as cpu_utilization_metrics_data.json")
 
-import json
+
+
+'''
+----------------- Machine Learing ---------------------
+'''
+
+
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression

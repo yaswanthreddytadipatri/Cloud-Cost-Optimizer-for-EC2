@@ -24,6 +24,14 @@ Before running the script, make sure you have the following in place:
     ```sh
     pip install json
 
+4. Install pandas
+    ```sh
+    pip install pandas
+
+5. Install scikit-learn
+    ```sh
+    pip install scikit-learn
+
 ## Usage
 
 1. Clone the repository to your local machine:
