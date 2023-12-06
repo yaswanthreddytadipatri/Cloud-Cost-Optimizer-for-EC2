@@ -1,0 +1,730 @@
+[
+    {
+        "MetricName": "EBSByteBalance%",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 99.0,
+        "HighestUtilization": 99.0
+    },
+    {
+        "MetricName": "EBSIOBalance%",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 99.0,
+        "HighestUtilization": 99.0
+    },
+    {
+        "MetricName": "EBSReadBytes",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 1658852.2170542635,
+        "HighestUtilization": 1658852.2170542635
+    },
+    {
+        "MetricName": "EBSWriteBytes",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 3377846.573643411,
+        "HighestUtilization": 3377846.573643411
+    },
+    {
+        "MetricName": "EBSWriteOps",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 75.13565891472868,
+        "HighestUtilization": 75.13565891472868
+    },
+    {
+        "MetricName": "CPUUtilization",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 0.38193076943681376,
+        "HighestUtilization": 0.38193076943681376
+    },
+    {
+        "MetricName": "EBSReadOps",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 43.18217054263566,
+        "HighestUtilization": 43.18217054263566
+    },
+    {
+        "MetricName": "CPUUtilization",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 0.32211893173352657,
+        "HighestUtilization": 0.32211893173352657
+    },
+    {
+        "MetricName": "CPUUtilization",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceType",
+                "Value": "t3.micro"
+            }
+        ],
+        "AverageUtilization": 0.3519667808398271,
+        "HighestUtilization": 0.3519667808398271
+    },
+    {
+        "MetricName": "CPUUtilization",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "ImageId",
+                "Value": "ami-0550c2ee59485be53"
+            }
+        ],
+        "AverageUtilization": 0.3519667808398271,
+        "HighestUtilization": 0.3519667808398271
+    },
+    {
+        "MetricName": "CPUUtilization",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [],
+        "AverageUtilization": 0.3519667808398271,
+        "HighestUtilization": 0.3519667808398271
+    },
+    {
+        "MetricName": "EBSIOBalance%",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 99.16602316602317,
+        "HighestUtilization": 99.16602316602317
+    },
+    {
+        "MetricName": "EBSByteBalance%",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 99.16602316602317,
+        "HighestUtilization": 99.16602316602317
+    },
+    {
+        "MetricName": "EBSReadBytes",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "ImageId",
+                "Value": "ami-0550c2ee59485be53"
+            }
+        ],
+        "AverageUtilization": 1703219.001934236,
+        "HighestUtilization": 1703219.001934236
+    },
+    {
+        "MetricName": "EBSWriteBytes",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [],
+        "AverageUtilization": 2553111.272727273,
+        "HighestUtilization": 2553111.272727273
+    },
+    {
+        "MetricName": "EBSWriteOps",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "ImageId",
+                "Value": "ami-0550c2ee59485be53"
+            }
+        ],
+        "AverageUtilization": 63.21856866537718,
+        "HighestUtilization": 63.21856866537718
+    },
+    {
+        "MetricName": "EBSReadBytes",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 1747414.4864864864,
+        "HighestUtilization": 1747414.4864864864
+    },
+    {
+        "MetricName": "EBSReadBytes",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceType",
+                "Value": "t3.micro"
+            }
+        ],
+        "AverageUtilization": 1703219.001934236,
+        "HighestUtilization": 1703219.001934236
+    },
+    {
+        "MetricName": "EBSReadOps",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [],
+        "AverageUtilization": 44.216634429400386,
+        "HighestUtilization": 44.216634429400386
+    },
+    {
+        "MetricName": "EBSWriteBytes",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceType",
+                "Value": "t3.micro"
+            }
+        ],
+        "AverageUtilization": 2553111.272727273,
+        "HighestUtilization": 2553111.272727273
+    },
+    {
+        "MetricName": "EBSWriteOps",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceType",
+                "Value": "t3.micro"
+            }
+        ],
+        "AverageUtilization": 63.21856866537718,
+        "HighestUtilization": 63.21856866537718
+    },
+    {
+        "MetricName": "EBSWriteOps",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 51.34749034749035,
+        "HighestUtilization": 51.34749034749035
+    },
+    {
+        "MetricName": "EBSWriteBytes",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "ImageId",
+                "Value": "ami-0550c2ee59485be53"
+            }
+        ],
+        "AverageUtilization": 2553111.272727273,
+        "HighestUtilization": 2553111.272727273
+    },
+    {
+        "MetricName": "EBSWriteBytes",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 1731560.277992278,
+        "HighestUtilization": 1731560.277992278
+    },
+    {
+        "MetricName": "EBSWriteOps",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [],
+        "AverageUtilization": 63.21856866537718,
+        "HighestUtilization": 63.21856866537718
+    },
+    {
+        "MetricName": "EBSReadOps",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceType",
+                "Value": "t3.micro"
+            }
+        ],
+        "AverageUtilization": 44.216634429400386,
+        "HighestUtilization": 44.216634429400386
+    },
+    {
+        "MetricName": "EBSReadBytes",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [],
+        "AverageUtilization": 1703219.001934236,
+        "HighestUtilization": 1703219.001934236
+    },
+    {
+        "MetricName": "EBSReadOps",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "ImageId",
+                "Value": "ami-0550c2ee59485be53"
+            }
+        ],
+        "AverageUtilization": 44.216634429400386,
+        "HighestUtilization": 44.216634429400386
+    },
+    {
+        "MetricName": "EBSReadOps",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 45.24710424710425,
+        "HighestUtilization": 45.24710424710425
+    },
+    {
+        "MetricName": "CPUSurplusCreditBalance",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 0.0,
+        "HighestUtilization": 0.0
+    },
+    {
+        "MetricName": "CPUCreditBalance",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 23.470171872549024,
+        "HighestUtilization": 23.470171872549024
+    },
+    {
+        "MetricName": "CPUCreditUsage",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 0.06462365130718954,
+        "HighestUtilization": 0.06462365130718954
+    },
+    {
+        "MetricName": "CPUSurplusCreditsCharged",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 0.0,
+        "HighestUtilization": 0.0
+    },
+    {
+        "MetricName": "CPUCreditBalance",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 24.133142133986933,
+        "HighestUtilization": 24.133142133986933
+    },
+    {
+        "MetricName": "CPUCreditUsage",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 0.05987238464052287,
+        "HighestUtilization": 0.05987238464052287
+    },
+    {
+        "MetricName": "CPUSurplusCreditBalance",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 0.0,
+        "HighestUtilization": 0.0
+    },
+    {
+        "MetricName": "CPUSurplusCreditsCharged",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 0.0,
+        "HighestUtilization": 0.0
+    },
+    {
+        "MetricName": "StatusCheckFailed_Instance",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 0.0,
+        "HighestUtilization": 0.0
+    },
+    {
+        "MetricName": "StatusCheckFailed_System",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 0.0,
+        "HighestUtilization": 0.0
+    },
+    {
+        "MetricName": "StatusCheckFailed",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 0.0,
+        "HighestUtilization": 0.0
+    },
+    {
+        "MetricName": "StatusCheckFailed_AttachedEBS",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 0.0,
+        "HighestUtilization": 0.0
+    },
+    {
+        "MetricName": "StatusCheckFailed",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 0.0,
+        "HighestUtilization": 0.0
+    },
+    {
+        "MetricName": "StatusCheckFailed_System",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 0.0,
+        "HighestUtilization": 0.0
+    },
+    {
+        "MetricName": "StatusCheckFailed_Instance",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 0.0,
+        "HighestUtilization": 0.0
+    },
+    {
+        "MetricName": "StatusCheckFailed_AttachedEBS",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 0.0,
+        "HighestUtilization": 0.0
+    },
+    {
+        "MetricName": "MetadataNoToken",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 0.0,
+        "HighestUtilization": 0.0
+    },
+    {
+        "MetricName": "MetadataNoToken",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceType",
+                "Value": "t3.micro"
+            }
+        ],
+        "AverageUtilization": 0.0,
+        "HighestUtilization": 0.0
+    },
+    {
+        "MetricName": "MetadataNoToken",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [],
+        "AverageUtilization": 0.0,
+        "HighestUtilization": 0.0
+    },
+    {
+        "MetricName": "MetadataNoToken",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "ImageId",
+                "Value": "ami-0550c2ee59485be53"
+            }
+        ],
+        "AverageUtilization": 0.0,
+        "HighestUtilization": 0.0
+    },
+    {
+        "MetricName": "MetadataNoToken",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 0.0,
+        "HighestUtilization": 0.0
+    },
+    {
+        "MetricName": "NetworkPacketsOut",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 2.1171875,
+        "HighestUtilization": 2.1171875
+    },
+    {
+        "MetricName": "NetworkPacketsIn",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 2.29296875,
+        "HighestUtilization": 2.29296875
+    },
+    {
+        "MetricName": "NetworkPacketsOut",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 15.390625,
+        "HighestUtilization": 15.390625
+    },
+    {
+        "MetricName": "NetworkPacketsIn",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 15.7109375,
+        "HighestUtilization": 15.7109375
+    },
+    {
+        "MetricName": "NetworkOut",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 2591.14453125,
+        "HighestUtilization": 2591.14453125
+    },
+    {
+        "MetricName": "NetworkIn",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0996879b42809498a"
+            }
+        ],
+        "AverageUtilization": 2476.94140625,
+        "HighestUtilization": 2476.94140625
+    },
+    {
+        "MetricName": "NetworkIn",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceType",
+                "Value": "t3.micro"
+            }
+        ],
+        "AverageUtilization": 1443.439453125,
+        "HighestUtilization": 1443.439453125
+    },
+    {
+        "MetricName": "NetworkIn",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "ImageId",
+                "Value": "ami-0550c2ee59485be53"
+            }
+        ],
+        "AverageUtilization": 1443.439453125,
+        "HighestUtilization": 1443.439453125
+    },
+    {
+        "MetricName": "NetworkIn",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [],
+        "AverageUtilization": 1443.439453125,
+        "HighestUtilization": 1443.439453125
+    },
+    {
+        "MetricName": "NetworkOut",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 325.05078125,
+        "HighestUtilization": 325.05078125
+    },
+    {
+        "MetricName": "NetworkOut",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [],
+        "AverageUtilization": 1458.09765625,
+        "HighestUtilization": 1458.09765625
+    },
+    {
+        "MetricName": "NetworkOut",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "ImageId",
+                "Value": "ami-0550c2ee59485be53"
+            }
+        ],
+        "AverageUtilization": 1458.09765625,
+        "HighestUtilization": 1458.09765625
+    },
+    {
+        "MetricName": "NetworkIn",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceId",
+                "Value": "i-0321df5897376032c"
+            }
+        ],
+        "AverageUtilization": 409.9375,
+        "HighestUtilization": 409.9375
+    },
+    {
+        "MetricName": "NetworkOut",
+        "Namespace": "AWS/EC2",
+        "Dimensions": [
+            {
+                "Name": "InstanceType",
+                "Value": "t3.micro"
+            }
+        ],
+        "AverageUtilization": 1458.09765625,
+        "HighestUtilization": 1458.09765625
+    }
+]

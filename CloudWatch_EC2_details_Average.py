@@ -19,6 +19,7 @@ response = cloudwatch.list_metrics(Namespace=ec2_namespace)
 ec2_metrics_data = []
 cpu_utilization_data = []
 
+
 # Iterate through EC2 metrics
 for metric in response['Metrics']:
     # Retrieve the metric data for the metric
@@ -28,7 +29,7 @@ for metric in response['Metrics']:
                 'Id': 'm1',
                 'MetricStat': {
                     'Metric': metric,
-                    'Period': 300,  # 5-minute period
+                    'Period': 6000,  # Half year period
                     'Stat': 'Average',
                 },
             },
@@ -52,6 +53,8 @@ for metric in response['Metrics']:
         'AverageUtilization': average_utilization,
         'HighestUtilization': highest_utilization,
     })
+
+    
 
     # Check if the metric is CPUUtilization
     if metric['MetricName'] == 'CPUUtilization':
@@ -85,67 +88,131 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn import metrics
-
-# Your provided JSON data
-json_data = cpu_utilization_data
+import matplotlib.pyplot as plt
 
 
-# Load JSON data into a Python object
-# data = json.loads(json_data)
+data = cpu_utilization_data
 
-# Create a DataFrame from the JSON data
-df = pd.DataFrame(json_data)
+# Extract relevant information and filter rows with empty 'InstanceId'
+rows = []
+for item in data:
+    dimensions = item.get('Dimensions', [])
+    instance_id = next((d.get('Value') for d in dimensions if d.get('Name') == 'InstanceId'), '')
+    if instance_id:
+        row = {
+            'MetricName': item.get('MetricName', ''),
+            'Namespace': item.get('Namespace', ''),
+            'InstanceID': instance_id,
+            'AverageUtilization': item.get('AverageUtilization', ''),
+            'HighestUtilization': item.get('HighestUtilization', ''),
+        }
+        rows.append(row)
 
-# Extracting Dimensions into separate columns
-for dim in df['Dimensions']:
-    if dim:
-        for d in dim:
-            df[d['Name'] + '_' + d['Value']] = 1
+# Create DataFrame
+df = pd.DataFrame(rows)
 
-# Drop the original 'Dimensions' column
-df.drop('Dimensions', axis=1, inplace=True)
+print(df.to_string())
 
-# Split the data into features (X) and target variable (y)
-X = df.drop(['MetricName', 'Namespace', 'AverageUtilization', 'HighestUtilization'], axis=1)
-y = df['AverageUtilization']
+CPU_To_Be_Reduced = (df['AverageUtilization'] < 40) & (df['HighestUtilization'] < 40)
 
-# Split the data into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+CPU_To_Be_Same = ((df['AverageUtilization'] > 40) & (df['AverageUtilization'] < 80)) & ((df['HighestUtilization'] > 40) & (df['HighestUtilization'] < 80))
 
-# Define new_instance_df and align columns
-new_instance_data = {
-    'InstanceId_i-xyz': 1,
-    'InstanceType_t3.micro': 1,
-    'ImageId_ami-xyz': 1,
-    '': 1
-}
+CPU_To_Be_Increased = (df['AverageUtilization'] > 90)
 
-new_instance_df = pd.DataFrame([new_instance_data])
-new_instance_df = new_instance_df.reindex(columns=X_train.columns, fill_value=0)
 
-# Train a linear regression model
-model = LinearRegression()
-model.fit(X_train, y_train)
+Increase = df[CPU_To_Be_Increased]
 
-# Make predictions on the test set
-y_pred = model.predict(X_test)
+Same = df[CPU_To_Be_Same]
 
-# Evaluate the model
-mse = metrics.mean_squared_error(y_test, y_pred)
-print(f'Mean Squared Error: {mse}')
+Decrease = df[CPU_To_Be_Reduced]
 
-# Threshold for deciding whether to increase or decrease CPU
-threshold = 80
-
-# Predicted CPU Utilization for new instance
-new_instance_prediction = model.predict(new_instance_df)[0]
-
-print(f'Predicted CPU Utilization for new instance: {new_instance_prediction}')
-
-# Decision based on the threshold
-if new_instance_prediction > threshold:
-    print('Consider increasing CPU.')
+if Increase.empty:
+    print("\n\n\t CPU's to be Increase\n\n There is nothing to be increased\n\n")
 else:
-    print('Consider decreasing CPU.')
+    print("\n\n\t CPU's to be Increase\n\n",Increase)
+
+if Same.empty:
+    print("\n\n\t CPU's to be Same\n\n There is nothing to be Same\n\n")
+else:
+    print("\n\n\t CPU's to be Increase\n\n",Same)
+
+if Decrease.empty:
+    print("\n\n\t CPU's to be Decrease\n\n There is nothing to be Decrease\n\n")
+else:
+    print("\n\n\t CPU's to be Decrease\n\n",Decrease)
+
+print("\n\n")
+
+
+
+
+
+
+# # Your provided JSON data
+# json_data = cpu_utilization_data
+
+
+# # Load JSON data into a Python object
+# # data = json.loads(json_data)
+
+# # Create a DataFrame from the JSON data
+# df = pd.DataFrame(json_data)
+
+# # Extracting Dimensions into separate columns
+# for dim in df['Dimensions']:
+#     if dim:
+#         for d in dim:
+#             df[d['Name'] + '_' + d['Value']] = 1
+
+# # Drop the original 'Dimensions' column
+# df.drop('Dimensions', axis=1, inplace=True)
+
+
+
+# # Split the data into features (X) and target variable (y)
+# X = df.drop(['MetricName', 'Namespace', 'AverageUtilization', 'HighestUtilization'], axis=1)
+# y = df['AverageUtilization']
+
+# # plt.plot(X,y)
+# # plt.show()
+
+# # Split the data into training and testing sets
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# # Define new_instance_df and align columns
+# new_instance_data = {
+#     'InstanceId_i-xyz': 1,
+#     'InstanceType_t3.micro': 1,
+#     'ImageId_ami-xyz': 1,
+#     '': 1
+# }
+
+# new_instance_df = pd.DataFrame([new_instance_data])
+# new_instance_df = new_instance_df.reindex(columns=X_train.columns, fill_value=0)
+
+# # Train a linear regression model
+# model = LinearRegression()
+# model.fit(X_train, y_train)
+
+# # Make predictions on the test set
+# y_pred = model.predict(X_test)
+
+# # Evaluate the model
+# mse = metrics.mean_squared_error(y_test, y_pred)
+# print(f'Mean Squared Error: {mse}')
+
+# # Threshold for deciding whether to increase or decrease CPU
+# threshold = 80
+
+# # Predicted CPU Utilization for new instance
+# new_instance_prediction = model.predict(new_instance_df)[0]
+
+# print(f'Predicted CPU Utilization for new instance: {new_instance_prediction}')
+
+# # Decision based on the threshold
+# if new_instance_prediction > threshold:
+#     print('Consider increasing CPU.')
+# else:
+#     print('Consider decreasing CPU.')
 
 
