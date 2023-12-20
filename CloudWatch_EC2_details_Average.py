@@ -3,7 +3,7 @@ import datetime
 import json
 
 # Initialize the CloudWatch client
-cloudwatch = boto3.client('cloudwatch', region_name='eu-north-1')
+cloudwatch = boto3.client('cloudwatch', region_name='us-east-1')
 
 # Define the namespace for EC2 metrics
 ec2_namespace = 'AWS/EC2'

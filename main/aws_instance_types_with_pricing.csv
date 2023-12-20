@@ -1,0 +1,101 @@
+Type,VCPU,Memory,Storage (GB),Network Performance,EBS-Optimized,Price (USD)
+m5.8xlarge,32,128.0,0,10 Gigabit,6800,N/A
+r7iz.12xlarge,48,384.0,0,25 Gigabit,19000,N/A
+c3.8xlarge,32,60.0,0,10 Gigabit,,N/A
+im4gn.2xlarge,8,32.0,0,Up to 25 Gigabit,5000,N/A
+c6a.24xlarge,96,192.0,0,37.5 Gigabit,30000,N/A
+m5a.2xlarge,8,32.0,0,Up to 10 Gigabit,1580,N/A
+r5dn.8xlarge,32,256.0,0,25 Gigabit,6800,N/A
+r6a.metal,192,1536.0,0,50 Gigabit,40000,N/A
+r6g.16xlarge,64,512.0,0,25 Gigabit,19000,N/A
+is4gen.xlarge,4,24.0,0,Up to 25 Gigabit,2500,N/A
+r7a.2xlarge,8,64.0,0,Up to 12.5 Gigabit,2500,N/A
+g5.4xlarge,16,64.0,0,Up to 25 Gigabit,4750,N/A
+c5ad.24xlarge,96,192.0,0,20 Gigabit,9500,N/A
+t1.micro,1,0.6123046875,0,Very Low,,N/A
+mac2-m2.metal,8,24.0,0,10 Gigabit,8000,N/A
+r3.large,2,15.0,0,Moderate,,N/A
+i3en.24xlarge,96,768.0,0,100 Gigabit,19000,N/A
+m5dn.2xlarge,8,32.0,0,Up to 25 Gigabit,2300,N/A
+hpc7g.4xlarge,16,128.0,0,200 Gigabit,87,N/A
+m7gd.large,2,8.0,0,Up to 12.5 Gigabit,630,N/A
+c6in.24xlarge,96,192.0,0,150 Gigabit,75000,N/A
+m5a.16xlarge,64,256.0,0,12 Gigabit,9500,N/A
+c7gn.xlarge,4,8.0,0,Up to 40 Gigabit,2083,N/A
+t2.2xlarge,8,32.0,0,Moderate,,N/A
+i2.2xlarge,8,61.0,0,High,1000,N/A
+r6a.2xlarge,8,64.0,0,Up to 12.5 Gigabit,2500,N/A
+c4.4xlarge,16,30.0,0,High,2000,N/A
+g3.16xlarge,64,488.0,0,25 Gigabit,14000,N/A
+r6in.metal,128,1024.0,0,200 Gigabit,100000,N/A
+m5d.8xlarge,32,128.0,0,10 Gigabit,6800,N/A
+c3.large,2,3.75,0,Moderate,,N/A
+i4i.16xlarge,64,512.0,0,37.5 Gigabit,20000,N/A
+r6i.xlarge,4,32.0,0,Up to 12.5 Gigabit,1250,N/A
+x2gd.metal,64,1024.0,0,25 Gigabit,19000,N/A
+trn1.32xlarge,128,512.0,0,8x 100 Gigabit,80000,N/A
+c6gn.16xlarge,64,128.0,0,100 Gigabit,38000,N/A
+r6gd.medium,1,8.0,0,Up to 10 Gigabit,315,N/A
+f1.2xlarge,8,122.0,0,Up to 10 Gigabit,1700,N/A
+r6id.16xlarge,64,512.0,0,25 Gigabit,20000,N/A
+m5zn.2xlarge,8,32.0,0,Up to 25 Gigabit,3170,N/A
+r7iz.16xlarge,64,512.0,0,25 Gigabit,20000,N/A
+r7a.32xlarge,128,1024.0,0,50 Gigabit,40000,N/A
+c5d.large,2,4.0,0,Up to 10 Gigabit,650,N/A
+x1e.8xlarge,32,976.0,0,Up to 10 Gigabit,3500,N/A
+c7gn.16xlarge,64,128.0,0,200 Gigabit,33333,N/A
+x1e.2xlarge,8,244.0,0,Up to 10 Gigabit,1000,N/A
+r6gd.2xlarge,8,64.0,0,Up to 10 Gigabit,2375,N/A
+i3en.3xlarge,12,96.0,0,Up to 25 Gigabit,3800,N/A
+d3en.2xlarge,8,32.0,0,Up to 25 Gigabit,1700,N/A
+c6in.xlarge,4,8.0,0,Up to 30 Gigabit,3125,N/A
+m7gd.xlarge,4,16.0,0,Up to 12.5 Gigabit,1250,N/A
+m5n.16xlarge,64,256.0,0,75 Gigabit,13600,N/A
+c6a.48xlarge,192,384.0,0,50 Gigabit,40000,N/A
+m2.4xlarge,8,68.3994140625,0,High,1000,N/A
+r5.24xlarge,96,768.0,0,25 Gigabit,19000,N/A
+r5a.2xlarge,8,64.0,0,Up to 10 Gigabit,1580,N/A
+c5n.2xlarge,8,21.0,0,Up to 25 Gigabit,2300,N/A
+m7g.4xlarge,16,64.0,0,Up to 15 Gigabit,5000,N/A
+c6id.8xlarge,32,64.0,0,12.5 Gigabit,10000,N/A
+c6i.4xlarge,16,32.0,0,Up to 12.5 Gigabit,5000,N/A
+t4g.nano,2,0.5,0,Up to 5 Gigabit,43,N/A
+m6idn.large,2,8.0,0,Up to 25 Gigabit,1562,N/A
+m6id.xlarge,4,16.0,0,Up to 12.5 Gigabit,1250,N/A
+is4gen.4xlarge,16,96.0,0,25 Gigabit,10000,N/A
+r6g.medium,1,8.0,0,Up to 10 Gigabit,315,N/A
+x2gd.8xlarge,32,512.0,0,12 Gigabit,9500,N/A
+c7g.8xlarge,32,64.0,0,15 Gigabit,10000,N/A
+r6in.24xlarge,96,768.0,0,150 Gigabit,75000,N/A
+m6id.2xlarge,8,32.0,0,Up to 12.5 Gigabit,2500,N/A
+r6g.large,2,16.0,0,Up to 10 Gigabit,630,N/A
+r6a.xlarge,4,32.0,0,Up to 12.5 Gigabit,1250,N/A
+i3en.12xlarge,48,384.0,0,50 Gigabit,9500,N/A
+c6gd.metal,64,128.0,0,25 Gigabit,19000,N/A
+m5ad.12xlarge,48,192.0,0,10 Gigabit,6780,N/A
+r7iz.8xlarge,32,256.0,0,12.5 Gigabit,10000,N/A
+m7i.16xlarge,64,256.0,0,25 Gigabit,20000,N/A
+c7a.medium,1,2.0,0,Up to 12.5 Gigabit,325,N/A
+inf2.48xlarge,192,768.0,0,100 Gigabit,60000,N/A
+m5dn.large,2,8.0,0,Up to 25 Gigabit,650,N/A
+r5n.12xlarge,48,384.0,0,50 Gigabit,9500,N/A
+x2iezn.4xlarge,16,512.0,0,Up to 25 Gigabit,4750,N/A
+m6gd.12xlarge,48,192.0,0,20 Gigabit,14250,N/A
+m6a.2xlarge,8,32.0,0,Up to 12.5 Gigabit,2500,N/A
+x2iedn.2xlarge,8,256.0,0,Up to 25 Gigabit,5000,N/A
+m5dn.12xlarge,48,192.0,0,50 Gigabit,9500,N/A
+m4.4xlarge,16,64.0,0,High,2000,N/A
+m6gd.xlarge,4,16.0,0,Up to 10 Gigabit,1188,N/A
+c7gd.medium,1,2.0,0,Up to 12.5 Gigabit,315,N/A
+r5a.xlarge,4,32.0,0,Up to 10 Gigabit,1085,N/A
+r6idn.16xlarge,64,512.0,0,100 Gigabit,50000,N/A
+g5.2xlarge,8,32.0,0,Up to 10 Gigabit,850,N/A
+m5d.xlarge,4,16.0,0,Up to 10 Gigabit,1150,N/A
+c6i.32xlarge,128,256.0,0,50 Gigabit,40000,N/A
+m7i.metal-24xl,96,384.0,0,37.5 Gigabit,30000,N/A
+c7a.xlarge,4,8.0,0,Up to 12.5 Gigabit,1250,N/A
+m7gd.16xlarge,64,256.0,0,30 Gigabit,20000,N/A
+c6a.16xlarge,64,128.0,0,25 Gigabit,20000,N/A
+r7a.xlarge,4,32.0,0,Up to 12.5 Gigabit,1250,N/A
+m6gd.4xlarge,16,64.0,0,Up to 10 Gigabit,4750,N/A
+c7i.2xlarge,8,16.0,0,Up to 12.5 Gigabit,2500,N/A

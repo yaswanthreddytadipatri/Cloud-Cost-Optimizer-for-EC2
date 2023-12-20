@@ -1,0 +1,2 @@
+instance_id,instance_type,ram_utilization_avg,cpu_utilization_avg,highest_ram_utilization,highest_cpu_utilization,price
+i-031e1119dd7330e66,c5ad.24xlarge,58.1,3.5,58,12.3,

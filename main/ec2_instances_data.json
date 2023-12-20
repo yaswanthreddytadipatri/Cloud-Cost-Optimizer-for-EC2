@@ -1,0 +1,11 @@
+[
+  {
+    "instance_id": "i-031e1119dd7330e66",
+    "instance_type": "t2.micro",
+    "ram_utilization_avg": 58.1,
+    "cpu_utilization_avg": 3.5,
+    "highest_ram_utilization": 58.0,
+    "highest_cpu_utilization": 12.3,
+    "price": null
+  }
+]
