@@ -1,0 +1,4 @@
+﻿Instance_Type,CPU,RAM,Recomdation
+r6g.medium,0.5,1.5,c7a.medium
+c3.large,0.7,2,r6gd.medium
+hpc7g.4xlarge,6.5,61,i2.2xlarge

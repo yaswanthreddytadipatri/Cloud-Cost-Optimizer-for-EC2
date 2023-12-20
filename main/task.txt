@@ -1,0 +1,2 @@
+using AWS Pricing Calculator try to give cost optimization by API(BOTO3)
+

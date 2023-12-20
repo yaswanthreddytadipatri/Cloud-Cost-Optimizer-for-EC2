@@ -1,2 +1,2 @@
 instance_id,instance_type,ram_utilization_avg,cpu_utilization_avg,highest_ram_utilization,highest_cpu_utilization,price
-i-031e1119dd7330e66,c5ad.24xlarge,58.1,3.5,58,12.3,
+i-031e1119dd7330e66,t2.micro,"svmem(total=17179869184, available=5377146880, percent=68.7, used=7353171968, free=102612992, active=5425250304, inactive=5145051136, wired=1927921664)",13.3,"svmem(total=17179869184, available=5451759616, percent=68.3, used=7278657536, free=125140992, active=5361287168, inactive=5197119488, wired=1917370368)",13.8,

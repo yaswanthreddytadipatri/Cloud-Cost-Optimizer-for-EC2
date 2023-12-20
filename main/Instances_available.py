@@ -20,7 +20,7 @@ def get_all_instance_types():
             'Storage (GB)': sum([block_device['SizeInGB'] for block_device in instance_storage_info]) if isinstance(instance_storage_info, list) else 0,
             'Network Performance': instance_type_info['NetworkInfo']['NetworkPerformance'],
             'EBS-Optimized': instance_type_info.get('EbsInfo', {}).get('EbsOptimizedInfo', {}).get('BaselineBandwidthInMbps'),
-            'Price (USD)': get_pricing_info(instance_type_info['InstanceType'])  # Replace with actual pricing logic
+            'Price (USD)': instance_type_info['InstanceType']  # Replace with actual pricing logic
         }
         instance_types.append(instance_type)
 
@@ -30,6 +30,7 @@ def get_pricing_info(instance_type):
     # Placeholder for pricing logic
     # Implement your logic to retrieve pricing information for the given instance type
     # This may involve using the AWS Pricing API, Pricing Calculator, or Price List API
+    
     return 'N/A'
 
 def save_to_csv(data, filename='aws_instance_types_with_pricing.csv'):
